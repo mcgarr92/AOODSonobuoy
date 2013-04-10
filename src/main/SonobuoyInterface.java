@@ -2,7 +2,6 @@ package main;
 
 public interface SonobuoyInterface 
 {
-
     public int getData();
     
     public String nameOfBuoy();
@@ -18,5 +17,4 @@ public interface SonobuoyInterface
     public double getAltitude();
 
     public void updateState(int newState);
-   
 }

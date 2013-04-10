@@ -1,23 +1,26 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package main;
 
 import comms.Message;
 
-/**
- *
- * @author zone785
- */
 public class Sonobuoy 
 {
-    //Private fields for all sonobuoys
-    int state = 0; //initial state
+    int state = 0; //initial state    
+    String name = " Sonobuoy";
+    double depth = 0.0;
+    int x = 0;
+    int y = 0;
+    int z = 0;
+    double altitude = 0.0;
+    
+    public Sonobuoy(String name, int state)
+    {
+        this.name = name + this.name;
+        this.state = state;
+    }
     
     public int getCurrentState()
     {
-        return state;
+        return this.state;
     }
 
     public void recieveMessage(Message m) {
@@ -28,3 +31,4 @@ public class Sonobuoy
         throw new UnsupportedOperationException("Not yet implemented");
     }
 }
+
