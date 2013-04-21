@@ -1,4 +1,4 @@
-package main;
+package sonobuoy;
 
 import comms.Message;
 

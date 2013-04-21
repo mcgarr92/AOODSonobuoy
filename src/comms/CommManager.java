@@ -1,6 +1,6 @@
 package comms;
 
-import main.Sonobuoy;
+import sonobuoy.Sonobuoy;
 
 /**
  * Provides an interface to the CommSender and CommReceiver classes.

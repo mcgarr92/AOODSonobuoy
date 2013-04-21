@@ -1,4 +1,4 @@
-package main;
+package sonobuoy;
 
 public interface SonobuoyInterface 
 {

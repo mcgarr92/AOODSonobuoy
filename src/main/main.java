@@ -1,12 +1,25 @@
 package main;
 
+import config.ConfigurationData;
+import factory.ActiveFactory;
+import factory.PassiveFactory;
+import factory.SpecialFactory;
+
 /**
  *
  * @author Kevin
  */
 public class main {
+    
     public static void main(String[] args) {
-        System.out.println("Gotta do something!!!");
+        ConfigurationData config = new ConfigurationData();
+        Application application;
+        switch(config.getSonobuoyType()) {
+            case 0: application = new Application(new ActiveFactory());  break;
+            case 1: application = new Application(new PassiveFactory()); break;
+            case 2: application = new Application(new SpecialFactory()); break;
+            default: break;
+        }
         
         //Create an active sonobuoy using the factory
         

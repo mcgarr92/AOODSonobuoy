@@ -1,6 +1,6 @@
 package comms;
 
-import main.Sonobuoy;
+import sonobuoy.Sonobuoy;
 
 /**
  * The CommREceiver class receives messages from the CommSender class.

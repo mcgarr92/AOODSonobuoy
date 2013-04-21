@@ -1,11 +1,11 @@
-package main;
+package sonobuoy;
 
-public class ActiveSonobuoy extends Sonobuoy implements SonobuoyInterface
-{
-    public ActiveSonobuoy(String name, int state)
+public class PassiveSonobuoy extends Sonobuoy implements SonobuoyInterface 
+{ 
+    public PassiveSonobuoy(String name, int state)
     {
-       super (name + " Active ", state);
-       updatePosition();      
+       super (name + " Passive ", state);       
+       updatePosition();
     }
     
     public int getData()
