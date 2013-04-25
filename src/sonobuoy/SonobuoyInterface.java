@@ -17,4 +17,6 @@ public interface SonobuoyInterface
     public double getAltitude();
 
     public void updateState(int newState);
+    
+    public boolean deploy();
 }

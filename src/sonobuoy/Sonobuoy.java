@@ -4,13 +4,17 @@ import comms.Message;
 
 public class Sonobuoy 
 {
-    int state = 0; //initial state    
+    //initial state = 0
+    //deploying state = 1
+    //deployed state = 2
+    int state = 0;     
     String name = " Sonobuoy";
-    double depth = 0.0;
+    double current_depth = 0.0;
     int x = 0;
     int y = 0;
     int z = 0;
     double altitude = 0.0;
+    boolean deployed = false; //initial status
     
     public Sonobuoy(String name, int state)
     {
