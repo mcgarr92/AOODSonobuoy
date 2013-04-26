@@ -7,8 +7,8 @@ import sonobuoy.Sonobuoy;
  */
 public class CommManager
 {
-    CommSender commSender;
-    CommReceiver commReceiver;
+    private CommSender commSender;
+    private CommReceiver commReceiver;
 
     /**
      * Constructor
