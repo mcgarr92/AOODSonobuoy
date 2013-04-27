@@ -4,6 +4,8 @@
  */
 package state;
 
+import comms.Message;
+
 public class UnfoldingState implements State {
 
     StateManagerControl stateManager;
@@ -14,6 +16,11 @@ public class UnfoldingState implements State {
 
     @Override
     public void performActiveProcessing() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void processMessage(Message nextMessage) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }

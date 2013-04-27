@@ -25,8 +25,8 @@ public class Sonobuoy {
         comms = factory.createComms();
         state = factory.createState();
         
-        state.setSensors(sensors);
-        state.setControls(controls);
+        //state.setSensors(sensors);
+        //state.setControls(controls);
     }
     
     public String getName() {
@@ -35,7 +35,11 @@ public class Sonobuoy {
 
     void run() {
         while (true) {
-            state.getCurrentState().performActiveProcessing();
+            if (comms.messagePending()) {
+                state.getCurrentState().processMessage(comms.getNextMessage());
+            } else {
+                state.getCurrentState().performActiveProcessing();
+            }
         }
     }
 }

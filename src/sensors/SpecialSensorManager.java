@@ -5,11 +5,19 @@ package sensors;
  * @author Kevin
  */
 public class SpecialSensorManager implements SensorManagerFacade {
+
     private final DepthSensor depthSensor;
     private final LocationManager locationManager;
+    private final SoundSensor soundSensor;
+    private final WaterDetector waterDetector;
+    private final WaterTemperatureSensor waterTemperature;
+
     public SpecialSensorManager() {
+        waterDetector = new WaterDetector();
         depthSensor = new DepthSensor();
         locationManager = new LocationManager();
+        soundSensor = new SoundSensor();
+        waterTemperature = new WaterTemperatureSensor();
     }
 
     @Override
@@ -47,4 +55,13 @@ public class SpecialSensorManager implements SensorManagerFacade {
         return this.locationManager.getAltitude();
     }
 
+    @Override
+    public boolean inWater() {
+        return this.waterDetector.inWater();
+    }
+
+    @Override
+    public float getWaterTemperature() {
+        return this.waterTemperature.getWaterTemperatureInFahrenheit();
+    }
 }

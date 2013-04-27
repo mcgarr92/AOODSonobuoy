@@ -1,6 +1,7 @@
 package comms;
 
-import sonobuoy.Sonobuoy;
+import java.util.ArrayList;
+import main.Sonobuoy;
 
 /**
  * The CommREceiver class receives messages from the CommSender class.
@@ -8,17 +9,17 @@ import sonobuoy.Sonobuoy;
 public class CommReceiver
 {
     private String name;
-    private Sonobuoy parent;
+    ArrayList<Message> messages;
 
     /**
      * Constructor
      * @param parent: Sonobuoy object that contains this CommReceiver
      * @param name: Name of CommReceiver
      */
-    public CommReceiver(Sonobuoy parent, String name)
+    public CommReceiver(String name)
     {
-        this.parent = parent;
         this.name = name;
+        this.messages = new ArrayList<Message>();
     }
 
     /**
@@ -27,7 +28,11 @@ public class CommReceiver
      */
     public void receiveMessage(Message m)
     {
-        parent.recieveMessage(m);
+        messages.add(m);
+    }
+    
+    public boolean messagePending() {
+        return messages.size() > 0;
     }
 
     /*
@@ -37,5 +42,9 @@ public class CommReceiver
     public String getName()
     {
         return name;
+    }
+
+    Message getNextMessage() {
+        return this.messages.remove(0);
     }
 }
