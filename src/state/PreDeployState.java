@@ -6,9 +6,14 @@ package state;
 
 public class PreDeployState implements State {
 
+    StateManagerControl stateManager;
+
+    PreDeployState(StateManagerControl sm) {
+        this.stateManager = sm;
+    }
+
     @Override
     public void performActiveProcessing() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
 }
