@@ -13,6 +13,10 @@ public interface SensorManagerFacade {
     public int getYPosition();
 
     public int getZPosition();
+    
+    public double getLatitude();
+
+    public double getLongitude();
 
     public double getAltitude();
 }

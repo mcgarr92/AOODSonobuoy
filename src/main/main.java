@@ -16,13 +16,13 @@ public class main {
         Sonobuoy sonobuoy = null;
         switch (config.getSonobuoyType()) {
             case 0:
-                sonobuoy = new Sonobuoy(new ActiveFactory());
+                sonobuoy = new Sonobuoy(new ActiveFactory(), "Active Sonobuoy");
                 break;
             case 1:
-                sonobuoy = new Sonobuoy(new PassiveFactory());
+                sonobuoy = new Sonobuoy(new PassiveFactory(), "Passive Sonobuoy");
                 break;
             case 2:
-                sonobuoy = new Sonobuoy(new SpecialFactory());
+                sonobuoy = new Sonobuoy(new SpecialFactory(), "Special Sonobuoy");
                 break;
             default:
                 break;
