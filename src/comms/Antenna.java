@@ -5,16 +5,16 @@ import sonobuoy.Sonobuoy;
 /**
  * Provides an interface to the CommSender and CommReceiver classes.
  */
-public class CommManager implements CommManagerFacade
+public class Antenna implements CommManagerFacade
 {
     private CommSender commSender;
     private CommReceiver commReceiver;
 
     /**
      * Constructor
-     * @param sonobouy: Sonobuoy containing this CommManager
+     * @param sonobouy: Sonobuoy containing this Antenna
      */
-    public CommManager(Sonobuoy sonobuoy)
+    public Antenna(Sonobuoy sonobuoy)
     {
         commSender = new CommSender(sonobuoy.getName() + " CommSender");
         commReceiver = new CommReceiver(sonobuoy, sonobuoy.getName() + " CommReceiver");

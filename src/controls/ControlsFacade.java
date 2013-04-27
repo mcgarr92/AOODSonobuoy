@@ -4,7 +4,7 @@ package controls;
  *
  * @author Kevin
  */
-public class Controls {
+public class ControlsFacade {
 
     private FrameModule frameModule;
     private LocationModule locationModule;
@@ -13,7 +13,7 @@ public class Controls {
     private SpecialCommandModule scModule;
     private SpeedModule speedModule;
 
-    public Controls() {
+    public ControlsFacade() {
         frameModule = new FrameModule();
         speedModule = new SpeedModule();
         locationModule = new LocationModule();
