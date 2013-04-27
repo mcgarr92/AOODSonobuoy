@@ -1,15 +1,25 @@
 package sensors;
 
+import controls.ControlsFacade;
+
 /**
  *
  * @author Kevin
  */
 public class ActiveSensorManager implements SensorManagerFacade {
+
     private final DepthSensor depthSensor;
     private final LocationManager locationManager;
+    private final SoundSensor soundSensor;
+    private final WaterDetector waterDetector;
+    private final WaterTemperatureSensor waterTemperature;
+
     public ActiveSensorManager() {
+        waterDetector = new WaterDetector();
         depthSensor = new DepthSensor();
         locationManager = new LocationManager();
+        soundSensor = new SoundSensor();
+        waterTemperature = new WaterTemperatureSensor();
     }
 
     @Override
@@ -47,4 +57,13 @@ public class ActiveSensorManager implements SensorManagerFacade {
         return this.locationManager.getAltitude();
     }
 
+    @Override
+    public boolean inWater() {
+        return this.waterDetector.inWater();
+    }
+
+    @Override
+    public float getWaterTemperature() {
+        return this.waterTemperature.getWaterTemperatureInFahrenheit();
+    }
 }
