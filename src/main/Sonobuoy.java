@@ -10,17 +10,29 @@ import state.StateManagerFacade;
  *
  * @author Kevin
  */
-public class Application {
+public class Sonobuoy {
 
+    private final String name;
     Controls controls;
     SensorManagerFacade sensors;
     CommManagerFacade comms;
     StateManagerFacade state;
 
-    public Application(SonobuoyFactory factory) {
+    public Sonobuoy(SonobuoyFactory factory, String n) {
+        this.name = n;
         controls = factory.createControls();
         sensors = factory.createSensors();
         comms = factory.createComms();
         state = factory.createState();
+    }
+    
+    public String getName() {
+        return this.name;
+    }
+
+    void run() {
+        while (true) {
+            state.getCurrentState().performActiveProcessing();
+        }
     }
 }
