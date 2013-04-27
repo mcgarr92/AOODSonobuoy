@@ -1,69 +1,33 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package controls;
 
 /**
  *
- * @author Kevin
+ * @author milksmooth
  */
-public class ControlsFacade {
+public interface ControlsFacade {
 
-    private FrameModule frameModule;
-    private LocationModule locationModule;
-    private MovementModule movementModule;
-    private SoundModule soundModule;
-    private SpecialCommandModule scModule;
-    private SpeedModule speedModule;
+    void closeFrames();
 
-    public ControlsFacade() {
-        frameModule = new FrameModule();
-        speedModule = new SpeedModule();
-        locationModule = new LocationModule();
-        movementModule = new MovementModule(locationModule);
-        soundModule = new SoundModule();
-        scModule = new SpecialCommandModule();
-    }
+    void generateSound();
 
-    public void openFrames() {
-        frameModule.openFrames();
-    }
+    double[] getLocation();
 
-    public void closeFrames() {
-        frameModule.closeFrames();
+    int getSpeed();
 
-    }
+    boolean isFrameOpen();
 
-    public boolean isFrameOpen() {
-        return frameModule.isFrameOpen();
-    }
+    void maydayCommand();
 
-    public double[] getLocation() {
-        double location[] = {locationModule.getX(), locationModule.getY(),
-            locationModule.getZ()};
-        return location;
-    }
+    void move(int x, int y);
 
-    public void move(int x, int y) {
-        movementModule.move(x, y);
-    }
+    void openFrames();
 
-    public void generateSound() {
-        soundModule.generateSound();
+    void setSpeed(int speed);
 
-    }
-
-    public void stopSonobouy() {
-        scModule.stopSonobouy();
-
-    }
-
-    public void maydayCommand() {
-        scModule.maydayCommand();
-    }
-
-    public void setSpeed(int speed) {
-        speedModule.setSpeed(speed);
-    }
-
-    public int getSpeed() {
-        return speedModule.getSpeed();
-    }
+    void stopSonobouy();
+    
 }
