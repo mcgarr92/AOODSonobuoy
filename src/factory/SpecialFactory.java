@@ -3,6 +3,8 @@ package factory;
 import comms.CommManager;
 import controls.Controls;
 import sensors.ActiveSensorManager;
+import state.StateManager;
+import state.StateManagerFacade;
 
 /**
  *
@@ -26,6 +28,11 @@ public class SpecialFactory implements SonobuoyFactory {
     @Override
     public CommManager createComms() {
         throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public StateManagerFacade createState() {
+        return new StateManager();
     }
 
 }

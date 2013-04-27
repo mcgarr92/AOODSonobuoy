@@ -3,6 +3,8 @@ package factory;
 import comms.CommManager;
 import controls.Controls;
 import sensors.ActiveSensorManager;
+import state.StateManager;
+import state.StateManagerFacade;
 
 /**
  *
@@ -28,4 +30,8 @@ public class PassiveFactory implements SonobuoyFactory {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
+    @Override
+    public StateManagerFacade createState() {
+        return new StateManager();
+    }
 }
