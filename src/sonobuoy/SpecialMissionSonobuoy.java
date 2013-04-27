@@ -32,11 +32,6 @@ public class SpecialMissionSonobuoy extends Sonobuoy implements SonobuoyInterfac
         return this.name;
     }
     
-    public double getDepth()
-    {
-        return this.current_depth;
-    }
-    
     public void updateState(int newState)
     {
         //initial state = 0
@@ -44,29 +39,6 @@ public class SpecialMissionSonobuoy extends Sonobuoy implements SonobuoyInterfac
         //deployed state = 2
         this.state = newState;
     }
-    public int getXPosition()
-    {
-       return this.x;
-    }
-    
-    public int getYPosition()
-    {
-       return this.y;
-    }
 
-    public int getZPosition()
-    {
-        return this.z;
-    }
-
-    public double getAltitude()
-    {
-       return this.altitude;
-    }
-
-    public void updatePosition()
-    {
-       //determine the XYZ position of the sonobuoy
-    }
 }
 

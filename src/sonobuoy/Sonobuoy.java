@@ -10,9 +10,6 @@ public class Sonobuoy
     int state = 0;     
     String name = " Sonobuoy";
     double current_depth = 0.0;
-    int x = 0;
-    int y = 0;
-    int z = 0;
     double altitude = 0.0;
     boolean deployed = false; //initial status
     

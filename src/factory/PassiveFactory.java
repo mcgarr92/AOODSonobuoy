@@ -2,7 +2,7 @@ package factory;
 
 import comms.CommManager;
 import controls.Controls;
-import sensors.Sensors;
+import sensors.ActiveSensorManager;
 
 /**
  *
@@ -19,7 +19,7 @@ public class PassiveFactory implements SonobuoyFactory {
     }
 
     @Override
-    public Sensors createSensors() {
+    public ActiveSensorManager createSensors() {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 

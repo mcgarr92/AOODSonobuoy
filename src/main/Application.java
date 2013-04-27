@@ -1,18 +1,23 @@
 package main;
 
-import comms.CommManager;
+import comms.CommManagerFacade;
 import controls.Controls;
 import factory.SonobuoyFactory;
-import sensors.Sensors;
+import sensors.SensorManagerFacade;
 
 /**
  *
  * @author Kevin
  */
 public class Application {
+
+    Controls controls;
+    SensorManagerFacade sensors;
+    CommManagerFacade comms;
+
     public Application(SonobuoyFactory factory) {
-        Controls controls = factory.createControls();
-        Sensors sensors = factory.createSensors();
-        CommManager comms = factory.createComms();
+        controls = factory.createControls();
+        sensors = factory.createSensors();
+        comms = factory.createComms();
     }
 }

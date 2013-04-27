@@ -1,11 +1,11 @@
 package factory;
 
-import comms.CommManager;
+import comms.CommManagerFacade;
 import controls.Controls;
-import sensors.Sensors;
+import sensors.SensorManagerFacade;
 
 public interface SonobuoyFactory {
     Controls createControls();
-    Sensors createSensors();
-    CommManager createComms();
+    SensorManagerFacade createSensors();
+    CommManagerFacade createComms();
 }

@@ -2,8 +2,10 @@ package factory;
 
 import comms.CommManager;
 import controls.Controls;
-import sensors.Sensors;
-
+import sensors.DepthSensor;
+import sensors.ActiveSensorManager;
+import sensors.SensorManagerFacade;
+import sensors.SoundSensor;
 
 /**
  *
@@ -20,13 +22,12 @@ public class ActiveFactory implements SonobuoyFactory {
     }
 
     @Override
-    public Sensors createSensors() {
-        throw new UnsupportedOperationException("Not supported yet.");
+    public SensorManagerFacade createSensors() {
+        return new ActiveSensorManager();
     }
 
     @Override
     public CommManager createComms() {
         throw new UnsupportedOperationException("Not supported yet.");
     }
-
 }

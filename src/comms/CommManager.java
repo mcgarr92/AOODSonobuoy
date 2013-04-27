@@ -5,7 +5,7 @@ import sonobuoy.Sonobuoy;
 /**
  * Provides an interface to the CommSender and CommReceiver classes.
  */
-public class CommManager
+public class CommManager implements CommManagerFacade
 {
     private CommSender commSender;
     private CommReceiver commReceiver;
@@ -24,6 +24,7 @@ public class CommManager
      * Calls the CommSender to send a message out.
      * @param m: Message being sent.
      */
+    @Override
     public void sendMessage(Message m)
     {
         commSender.sendMessage(m);
@@ -33,6 +34,7 @@ public class CommManager
      * Calls the CommSender to register a CommReceiver.
      * @param recClass: CommReceiver registering for message.
      */
+    @Override
     public void registerForMessage(CommReceiver recClass)
     {
         commSender.registerForMessage(recClass);
@@ -43,6 +45,7 @@ public class CommManager
      * any more messages from this object.
      * @param recClass: CommReceiver that receives message.
      */
+    @Override
     public void deregisterForMessage(CommReceiver recClass)
     {
         commSender.deregisterForMessage(recClass);
@@ -52,6 +55,7 @@ public class CommManager
      * Receives message and passes it to the CommReceiver.
      * @param m: Message received.
      */
+    @Override
     public void receiveMessage(Message m)
     {
         commReceiver.receiveMessage(m);
