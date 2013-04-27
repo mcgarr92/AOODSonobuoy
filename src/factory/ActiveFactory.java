@@ -1,7 +1,9 @@
 package factory;
 
-import comms.CommManager;
+import comms.Antenna;
+import comms.CommManagerFacade;
 import controls.Controls;
+import controls.ControlsFacade;
 import sensors.ActiveSensorManager;
 import sensors.SensorManagerFacade;
 import state.StateManager;
@@ -17,8 +19,8 @@ public class ActiveFactory implements SonobuoyFactory {
     }
 
     @Override
-    public Controls createControls() {
-        throw new UnsupportedOperationException("Not supported yet.");
+    public ControlsFacade createControls() {
+        return new Controls();
     }
 
     @Override
@@ -27,8 +29,8 @@ public class ActiveFactory implements SonobuoyFactory {
     }
 
     @Override
-    public CommManager createComms() {
-        throw new UnsupportedOperationException("Not supported yet.");
+    public CommManagerFacade createComms() {
+        return new Antenna();
     }
 
     @Override

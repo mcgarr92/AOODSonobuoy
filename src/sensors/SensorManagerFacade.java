@@ -4,6 +4,8 @@
  */
 package sensors;
 
+import controls.ControlsFacade;
+
 public interface SensorManagerFacade {
 
     public double getDepth();
@@ -19,4 +21,8 @@ public interface SensorManagerFacade {
     public double getLongitude();
 
     public double getAltitude();
+    
+    public boolean inWater();
+    
+    public float getWaterTemperature();
 }

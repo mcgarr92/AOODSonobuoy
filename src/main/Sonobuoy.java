@@ -1,7 +1,7 @@
 package main;
 
 import comms.CommManagerFacade;
-import controls.Controls;
+import controls.ControlsFacade;
 import factory.SonobuoyFactory;
 import sensors.SensorManagerFacade;
 import state.StateManagerFacade;
@@ -13,7 +13,7 @@ import state.StateManagerFacade;
 public class Sonobuoy {
 
     private final String name;
-    Controls controls;
+    ControlsFacade controls;
     SensorManagerFacade sensors;
     CommManagerFacade comms;
     StateManagerFacade state;
@@ -24,6 +24,9 @@ public class Sonobuoy {
         sensors = factory.createSensors();
         comms = factory.createComms();
         state = factory.createState();
+        
+        state.setSensors(sensors);
+        state.setControls(controls);
     }
     
     public String getName() {

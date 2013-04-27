@@ -6,8 +6,6 @@ package state;
 
 public class StateManager implements StateManagerFacade, StateManagerControl {
     private final PreDeployState preDeployState;
-    private final DroppingState droppingState;
-    private final TouchdownState touchdownState;
     private final SinkingState sinkingState;
     private final ReleasingState releasingState;
     private final UnfoldingState unfoldingState;
@@ -17,8 +15,6 @@ public class StateManager implements StateManagerFacade, StateManagerControl {
     
     public StateManager() {
         preDeployState = new PreDeployState(this);
-        droppingState = new DroppingState(this);
-        touchdownState = new TouchdownState(this);
         sinkingState = new SinkingState(this);
         releasingState = new ReleasingState(this);
         unfoldingState = new UnfoldingState(this);

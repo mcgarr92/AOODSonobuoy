@@ -1,8 +1,12 @@
 package factory;
 
-import comms.CommManager;
+import comms.Antenna;
+import comms.CommManagerFacade;
 import controls.Controls;
+import controls.ControlsFacade;
 import sensors.ActiveSensorManager;
+import sensors.SensorManagerFacade;
+import sensors.SpecialSensorManager;
 import state.StateManager;
 import state.StateManagerFacade;
 
@@ -16,23 +20,22 @@ public class SpecialFactory implements SonobuoyFactory {
     }
 
     @Override
-    public Controls createControls() {
-        throw new UnsupportedOperationException("Not supported yet.");
+    public ControlsFacade createControls() {
+        return new Controls();
     }
 
     @Override
-    public ActiveSensorManager createSensors() {
-        throw new UnsupportedOperationException("Not supported yet.");
+    public SensorManagerFacade createSensors() {
+        return new SpecialSensorManager();
     }
 
     @Override
-    public CommManager createComms() {
-        throw new UnsupportedOperationException("Not supported yet.");
+    public CommManagerFacade createComms() {
+        return new Antenna();
     }
 
     @Override
     public StateManagerFacade createState() {
         return new StateManager();
     }
-
 }
