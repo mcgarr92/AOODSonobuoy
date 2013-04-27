@@ -1,49 +1,27 @@
 package controls;
 
-
 public class MovementModule {
-	private SpeedModule currentSpeed;
-	
-	public MovementModule(SpeedModule currentSpeed){
-		this.currentSpeed = currentSpeed;
-	}
-	
-	public enum axis {
-		x_axis, y_axis, z_axis
-	}
 
+    private LocationModule location;
 
-	public void moveX_axis(SpeedModule speed) {
-		this.currentSpeed = speed;
-	}
+    public MovementModule(LocationModule location) {
+        this.location = location;
+    }
 
-	public void moveY_axis(SpeedModule speed) {
-		this.currentSpeed = speed;
-	}
+    public void move(double x, double y) {
+        double degrees = Math.toDegrees(Math.atan(y / x));
+        this.rotateZ_axis(degrees);
+        location.setX(x);
+        location.setY(y);
+    }
 
-	public void moveZ_axis(SpeedModule speed) {
-		this.currentSpeed = speed;
-	}
-
-
-	public void rotateX_axis(int Degrees) {
-	}
-
-	public void rotateY_axis(int Degrees) {
-	}
-
-	public void rotateZ_axis(int Degrees) {
-
-	}
-
-	public void turn(MovementModule.axis axis_type, int Degrees, int seconds) {
-		if (axis_type.equals(axis.x_axis)) {
-
-		} else if (axis_type.equals(axis.y_axis)) {
-
-		} else if (axis_type.equals(axis.z_axis)) {
-
-		}
-	}
+    private void rotateZ_axis(double degrees) {
+        System.out.println("Rotated: " + degrees + " degrees");
+    }
+//    public void turn(MovementModule.axis axis_type, int Degrees, int seconds) {
+//        if (axis_type.equals(axis.x_axis)) {
+//        } else if (axis_type.equals(axis.y_axis)) {
+//        } else if (axis_type.equals(axis.z_axis)) {
+//        }
+//    }
 }
-
