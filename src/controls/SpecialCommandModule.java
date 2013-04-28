@@ -1,14 +1,26 @@
 package controls;
 
+/**
+ *
+ * @author milksmooth
+ */
 public class SpecialCommandModule {
-	public SpecialCommandModule() {
-	}
 
-	public void stopSonobouy() {
+    /**
+     * Constructor
+     */
+    public SpecialCommandModule() {
+    }
 
-	}
+    /**
+     * Stops the sonobuoy; Use for emergency case.
+     */
+    public void stopSonobouy() {
+    }
 
-	public void maydayCommand() {
-
-	}
+    /**
+     * Emergency mode to save the Sonobuoy's life.
+     */
+    public void maydayCommand() {
+    }
 }

@@ -1,23 +1,41 @@
-
 package controls;
 
+/**
+ *
+ * @author milksmooth
+ */
 public class FrameModule {
-	private boolean framesOpen;
 
-	public FrameModule() {
-		framesOpen = false;
-	}
+    private boolean framesOpen;
 
-	public void openFrames() {
-		this.framesOpen = true;
-	}
+    /**
+     * Constructor
+     */
+    public FrameModule() {
+        framesOpen = false;
+    }
 
-	public void closeFrames() {
-		this.framesOpen = false;
+    /**
+     * Perform command to open frames
+     */
+    public void openFrames() {
+        this.framesOpen = true;
+    }
 
-	}
+    /**
+     * Perform command to close frames
+     */
+    public void closeFrames() {
+        this.framesOpen = false;
 
-	public boolean isFrameOpen() {
-		return this.framesOpen;
-	}
+    }
+
+    /**
+     * Method return whether or not frame is open
+     *
+     * @return boolean: true if open
+     */
+    public boolean isFrameOpen() {
+        return this.framesOpen;
+    }
 }

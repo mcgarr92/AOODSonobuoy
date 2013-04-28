@@ -1,17 +1,32 @@
 package controls;
 
+/**
+ *
+ * @author milksmooth
+ */
 public class SpeedModule {
-	private int speed;
+    private int speed;
 
-	public SpeedModule() {
-		speed = 0;
-	}
+    /**
+     * Constructor
+     */
+    public SpeedModule() {
+        speed = 0;
+    }
 
-	public void setSpeed(int speed) {
-		this.speed = speed;
-	}
+    /**
+     *
+     * @param speed:int speed value
+     */
+    public void setSpeed(int speed) {
+        this.speed = speed;
+    }
 
-	public int getSpeed() {
-		return this.speed;
-	}
+    /**
+     * Return the value of the current speed
+     * @return int value of speed
+     */
+    public int getSpeed() {
+        return this.speed;
+    }
 }

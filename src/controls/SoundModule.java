@@ -1,10 +1,20 @@
 package controls;
 
+/**
+ *
+ * @author milksmooth
+ */
 public class SoundModule {
-	public SoundModule() {
 
-	}
-	public void generateSound() {
+    /**
+     * Constructor
+     */
+    public SoundModule() {
+    }
 
-	}
+    /**
+     * Generate sound
+     */
+    public void generateSound() {
+    }
 }
