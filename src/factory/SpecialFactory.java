@@ -4,10 +4,9 @@ import comms.Antenna;
 import comms.CommManagerFacade;
 import controls.Controls;
 import controls.ControlsFacade;
-import sensors.ActiveSensorManager;
 import sensors.SensorManagerFacade;
 import sensors.SpecialSensorManager;
-import state.StateManager;
+import state.SpecialStateManager;
 import state.StateManagerFacade;
 
 /**
@@ -36,6 +35,6 @@ public class SpecialFactory implements SonobuoyFactory {
 
     @Override
     public StateManagerFacade createState() {
-        return new StateManager();
+        return new SpecialStateManager();
     }
 }

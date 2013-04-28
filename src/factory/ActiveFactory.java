@@ -6,7 +6,7 @@ import controls.Controls;
 import controls.ControlsFacade;
 import sensors.ActiveSensorManager;
 import sensors.SensorManagerFacade;
-import state.StateManager;
+import state.ActiveStateManager;
 import state.StateManagerFacade;
 
 /**
@@ -35,6 +35,6 @@ public class ActiveFactory implements SonobuoyFactory {
 
     @Override
     public StateManagerFacade createState() {
-        return new StateManager();
+        return new ActiveStateManager();
     }
 }
