@@ -3,8 +3,8 @@ package comms;
 import java.util.ArrayList;
 
 /**
- * The CommSender class keeps track of who is registered for a message
- * and will also send messages out.
+ * The CommSender class keeps track of who is registered for a message and will
+ * also send messages out.
  */
 public class CommSender
 {
@@ -13,6 +13,7 @@ public class CommSender
 
     /**
      * Constructor.
+     *
      * @param name: Name of CommSender
      */
     public CommSender(String name)
@@ -23,11 +24,12 @@ public class CommSender
 
     /**
      * Send a message to all objects registered for this message.
+     *
      * @param m: Message being sent.
      */
     public void sendMessage(Message m)
     {
-        for(int i = 0; i < messageReceivers.size(); i ++)
+        for(int i = 0; i < messageReceivers.size(); i++)
         {
             messageReceivers.get(i).receiveMessage(m);
             System.out.println("Message sent from " + getName() + " to " + messageReceivers.get(i).getName() + "!");
@@ -36,6 +38,7 @@ public class CommSender
 
     /**
      * Registers an object to receive a message.
+     *
      * @param recClass: CommReceiver registering for message.
      */
     public void registerForMessage(CommReceiver recClass)
@@ -52,7 +55,9 @@ public class CommSender
     }
 
     /**
-     * Deregister an object so it won't receive any more messages from this object.
+     * Deregister an object so it won't receive any more messages from this
+     * object.
+     *
      * @param recClass: CommReceiver that receives message.
      */
     public void deregisterForMessage(CommReceiver recClass)

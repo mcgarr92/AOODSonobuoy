@@ -12,8 +12,9 @@ public class CommReceiver
 
     /**
      * Constructor
+     *
      * @param parent: Sonobuoy object that contains this CommReceiver
-     * @param name: Name of CommReceiver
+     * @param name:   Name of CommReceiver
      */
     public CommReceiver(String name)
     {
@@ -23,14 +24,16 @@ public class CommReceiver
 
     /**
      * Receives message from CommSenderClass
+     *
      * @param m: Message received.
      */
     public void receiveMessage(Message m)
     {
         messages.add(m);
     }
-    
-    public boolean messagePending() {
+
+    public boolean messagePending()
+    {
         return messages.size() > 0;
     }
 
@@ -43,7 +46,13 @@ public class CommReceiver
         return name;
     }
 
-    Message getNextMessage() {
+    /**
+     * Gets the next message that is waiting to be processed.
+     *
+     * @return Message: Message waiting to be processed.
+     */
+    public Message getNextMessage()
+    {
         return this.messages.remove(0);
     }
 }

@@ -14,8 +14,8 @@ public class Antenna implements CommManagerFacade {
      * @param sonobouy: Sonobuoy containing this Antenna
      */
     public Antenna() {
-        commSender = new CommSender("comm sender");
-        commReceiver = new CommReceiver("comm receiver");
+        commSender = new CommSender("CommSender");
+        commReceiver = new CommReceiver("CommReceiver");
     }
 
     /**
@@ -59,11 +59,19 @@ public class Antenna implements CommManagerFacade {
         commReceiver.receiveMessage(m);
     }
 
+    /**
+     * Checks to see if a message is pending.
+     * @return true is message is pending, false otherwise.
+     */
     @Override
     public boolean messagePending() {
         return commReceiver.messagePending();
     }
 
+    /**
+     * Gets the next message that is waiting to be processed.
+     * @return Message: Message waiting to be processed.
+     */
     @Override
     public Message getNextMessage() {
         return commReceiver.getNextMessage();
