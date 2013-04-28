@@ -5,6 +5,8 @@
 package state;
 
 import comms.Message;
+import controls.ControlsFacade;
+import sensors.SensorManagerFacade;
 
 public class UnfoldingState implements State {
 
@@ -15,12 +17,12 @@ public class UnfoldingState implements State {
     }
 
     @Override
-    public void performActiveProcessing() {
+    public void processMessage(Message nextMessage) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public void processMessage(Message nextMessage) {
+    public void performActiveProcessing(SensorManagerFacade sensors, ControlsFacade controls) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }

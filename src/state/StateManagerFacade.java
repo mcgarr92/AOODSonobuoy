@@ -4,6 +4,9 @@
  */
 package state;
 
+import controls.ControlsFacade;
+import sensors.SensorManagerFacade;
+
 public interface StateManagerFacade {
 
     State getCurrentState();

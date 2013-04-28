@@ -5,9 +5,12 @@
 package state;
 
 import comms.Message;
+import controls.ControlsFacade;
+import sensors.SensorManagerFacade;
 
 public interface State {
-    public void performActiveProcessing();
 
     public void processMessage(Message nextMessage);
+
+    public void performActiveProcessing(SensorManagerFacade sensors, ControlsFacade controls);
 }

@@ -1,25 +1,19 @@
 package controls;
 
-/**
- *
- * @author Kevin
- */
-public class Controls implements ControlsFacade {
+public class ActiveControls implements ControlsFacade {
 
     private FrameModule frameModule;
     private LocationModule locationModule;
     private MovementModule movementModule;
     private SoundModule soundModule;
-    private SpecialCommandModule scModule;
     private SpeedModule speedModule;
 
-    public Controls() {
+    public ActiveControls() {
         frameModule = new FrameModule();
         speedModule = new SpeedModule();
         locationModule = new LocationModule();
         movementModule = new MovementModule(locationModule);
         soundModule = new SoundModule();
-        scModule = new SpecialCommandModule();
     }
 
     @Override
@@ -58,13 +52,12 @@ public class Controls implements ControlsFacade {
 
     @Override
     public void stopSonobouy() {
-        scModule.stopSonobouy();
-
+        // not implemented
     }
 
     @Override
     public void maydayCommand() {
-        scModule.maydayCommand();
+        // not implemented
     }
 
     @Override

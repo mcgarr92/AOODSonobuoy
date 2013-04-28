@@ -2,7 +2,7 @@ package factory;
 
 import comms.Antenna;
 import comms.CommManagerFacade;
-import controls.Controls;
+import controls.PassiveControls;
 import controls.ControlsFacade;
 import sensors.PassiveSensorManager;
 import sensors.SensorManagerFacade;
@@ -20,7 +20,7 @@ public class PassiveFactory implements SonobuoyFactory {
 
     @Override
     public ControlsFacade createControls() {
-        return new Controls();
+        return new PassiveControls();
     }
 
     @Override
