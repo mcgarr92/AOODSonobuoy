@@ -1,7 +1,6 @@
 package comms;
 
 import java.util.ArrayList;
-import main.Sonobuoy;
 
 /**
  * The CommREceiver class receives messages from the CommSender class.

@@ -1,7 +1,5 @@
 package comms;
 
-import main.Sonobuoy;
-
 /**
  * Provides an interface to the CommSender and CommReceiver classes.
  */
