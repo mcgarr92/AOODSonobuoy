@@ -1,5 +1,10 @@
 package controls;
 
+/**
+ *
+ * Passive Sonobuoy implements the contolFacade to allow to 
+ * perform the permitted functions
+ */
 public class PassiveControls implements ControlsFacade {
 
     private FrameModule frameModule;
@@ -7,6 +12,9 @@ public class PassiveControls implements ControlsFacade {
     private MovementModule movementModule;
     private SpeedModule speedModule;
 
+    /**
+     * Constructor
+     */
     public PassiveControls() {
         frameModule = new FrameModule();
         speedModule = new SpeedModule();

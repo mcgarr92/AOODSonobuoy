@@ -1,5 +1,10 @@
 package controls;
 
+/**
+ *
+ * Special control type Sonobuoy implements the contolFacade to allow to
+ * perform the permitted functions
+ */
 public class SpecialControls implements ControlsFacade {
 
     private FrameModule frameModule;
@@ -8,6 +13,9 @@ public class SpecialControls implements ControlsFacade {
     private SpecialCommandModule scModule;
     private SpeedModule speedModule;
 
+    /**
+     * COnstructor
+     */
     public SpecialControls() {
         frameModule = new FrameModule();
         speedModule = new SpeedModule();

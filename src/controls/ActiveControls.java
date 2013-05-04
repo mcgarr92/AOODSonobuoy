@@ -1,5 +1,10 @@
 package controls;
 
+/**
+ *
+ * Active Sonobuoy implements the contolFacade to allow to 
+ * perform the permitted functions
+ */
 public class ActiveControls implements ControlsFacade {
 
     private FrameModule frameModule;
@@ -8,6 +13,9 @@ public class ActiveControls implements ControlsFacade {
     private SoundModule soundModule;
     private SpeedModule speedModule;
 
+    /**
+     * Constructor
+     */
     public ActiveControls() {
         frameModule = new FrameModule();
         speedModule = new SpeedModule();
