@@ -2,7 +2,7 @@ package controls;
 
 /**
  *
- * @author milksmooth
+ * Class responsible for setting and retrieving sonobuoy location
  */
 public class LocationModule {
 

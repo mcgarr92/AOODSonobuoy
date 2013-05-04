@@ -2,7 +2,7 @@ package controls;
 
 /**
  *
- * @author milksmooth
+ * Class responsible for commanding sonobuoy to open or close frames
  */
 public class FrameModule {
 

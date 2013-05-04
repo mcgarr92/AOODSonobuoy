@@ -2,7 +2,7 @@ package controls;
 
 /**
  *
- * @author milksmooth
+ * Class responsible for special command processing
  */
 public class SpecialCommandModule {
 

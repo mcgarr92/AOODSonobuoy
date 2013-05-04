@@ -2,7 +2,7 @@ package controls;
 
 /**
  *
- * @author milksmooth
+ * Class responsible for broadcasting sound 
  */
 public class SoundModule {
 

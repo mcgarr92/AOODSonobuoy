@@ -6,7 +6,7 @@ package controls;
 
 /**
  *
- * @author milksmooth
+ * Interface used for performing control commands for sonobuoy
  */
 public interface ControlsFacade {
 

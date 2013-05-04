@@ -2,7 +2,7 @@ package controls;
 
 /**
  *
- * @author milksmooth
+ * Class responsible for translating and rotating sonobuoy as needed.
  */
 public class MovementModule {
 

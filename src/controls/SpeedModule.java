@@ -2,7 +2,7 @@ package controls;
 
 /**
  *
- * @author milksmooth
+ * Class handles speed commands
  */
 public class SpeedModule {
     private int speed;
