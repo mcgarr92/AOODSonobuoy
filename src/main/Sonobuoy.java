@@ -31,6 +31,7 @@ public class Sonobuoy {
     }
 
     void run() {
+        System.out.println(this.getName() + " has started");
         while (true) {
             if (comms.messagePending()) {
                 state.getCurrentState().processMessage(comms.getNextMessage());
