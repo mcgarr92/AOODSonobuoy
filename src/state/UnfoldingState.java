@@ -23,6 +23,13 @@ public class UnfoldingState implements State {
 
     @Override
     public void performActiveProcessing(SensorManagerFacade sensors, ControlsFacade controls) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        displayStateName();
+        stateManager.transitionToNextState();
+    }
+    
+    @Override
+    public void displayStateName()
+    {
+        System.out.println("4. Unfolding State");
     }
 }

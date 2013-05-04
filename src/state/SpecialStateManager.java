@@ -4,13 +4,11 @@
  */
 package state;
 
-import java.util.ArrayList;
-
 public class SpecialStateManager extends StateManager {
-    private ActiveDeployedState deployedState;
+    private SpecialDeployedState deployedState;
     
     public SpecialStateManager() {
-        deployedState = new ActiveDeployedState();
+        deployedState = new SpecialDeployedState();
         states.add(deployedState);
     }
 }

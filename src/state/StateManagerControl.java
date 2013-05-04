@@ -6,6 +6,6 @@ package state;
 
 public interface StateManagerControl {
 
-    void trasitionToNextState();
+    void transitionToNextState();
     
 }

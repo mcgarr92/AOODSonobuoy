@@ -13,4 +13,6 @@ public interface State {
     public void processMessage(Message nextMessage);
 
     public void performActiveProcessing(SensorManagerFacade sensors, ControlsFacade controls);
+    
+    public void displayStateName();
 }

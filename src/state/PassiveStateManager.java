@@ -4,13 +4,11 @@
  */
 package state;
 
-import java.util.ArrayList;
-
 public class PassiveStateManager extends StateManager {
-    private ActiveDeployedState deployedState;
+    private PassiveDeployedState deployedState;
     
     public PassiveStateManager() {
-        deployedState = new ActiveDeployedState();
+        deployedState = new PassiveDeployedState();
         states.add(deployedState);
     }
 }

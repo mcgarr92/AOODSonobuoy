@@ -36,7 +36,7 @@ public class StateManager implements StateManagerFacade, StateManagerControl {
     }
 
     @Override
-    public void trasitionToNextState() {
+    public void transitionToNextState() {
         if (this.currentState < states.size())
             this.currentState++;
     }

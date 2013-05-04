@@ -12,11 +12,19 @@ class PassiveDeployedState implements State {
 
     @Override
     public void processMessage(Message nextMessage) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        throw new UnsupportedOperationException("Passive Deployed Process Message Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
     public void performActiveProcessing(SensorManagerFacade sensors, ControlsFacade controls) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        displayStateName();
+        //stateManager.trasitionToNextState();
+        throw new UnsupportedOperationException("Passive Deployed State not supported yet.");
+    }
+    
+    @Override
+    public void displayStateName()
+    {
+        System.out.println("5. Passive Deployed State");
     }
 }

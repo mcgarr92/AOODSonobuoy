@@ -4,8 +4,6 @@
  */
 package state;
 
-import java.util.ArrayList;
-
 public class ActiveStateManager extends StateManager {
     private ActiveDeployedState deployedState;
     
