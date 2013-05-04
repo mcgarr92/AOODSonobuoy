@@ -6,38 +6,63 @@ package sensors;
 
 public class LocationManager {
 
-    private int x = 0;
-    private int y = 0;
-    private int z = 0;
-    private double lat;
-    private double lon;
-    private double altitude;
+	private int x = 0;
+	private int y = 0;
+	private int z = 0;
+	private double lat;
+	private double lon;
+	private double altitude;
+	private int altitudeCallCount;
 
-    public int getXPosition() {
-        return this.x;
-    }
+	/**
+	 *
+	 * @return
+	 */
+	public int getXPosition() {
+		return this.x;
+	}
 
-    public int getYPosition() {
-        return this.y;
-    }
+	/**
+	 *
+	 * @return
+	 */
+	public int getYPosition() {
+		return this.y;
+	}
 
-    public int getZPosition() {
-        return this.z;
-    }
+	/**
+	 *
+	 * @return
+	 */
+	public int getZPosition() {
+		return this.z;
+	}
 
-    public double getLatitude() {
-        return this.lat;
-    }
+	/**
+	 *
+	 * @return
+	 */
+	public double getLatitude() {
+		return this.lat;
+	}
 
-    public double getLongitude() {
-        return this.lon;
-    }
+	/**
+	 *
+	 * @return
+	 */
+	public double getLongitude() {
+		return this.lon;
+	}
 
-    public double getAltitude() {
-        return this.altitude;
-    }
+	/**
+	 *	
+	 * @return altitude
+	 */
+	public double getAltitude() {
+		return this.altitude;
+	}
 
-    private void updatePosition() {
-        //determine the XYZ position of the sonobuoy
-    }
+	private void updatePosition() {
+		//determine the XYZ position of the sonobuoy
+	}
 }

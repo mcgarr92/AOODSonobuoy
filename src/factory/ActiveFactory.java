@@ -9,31 +9,46 @@ import sensors.SensorManagerFacade;
 import state.ActiveStateManager;
 import state.StateManagerFacade;
 
-/**
- *
- * @author Kevin
- */
 public class ActiveFactory implements SonobuoyFactory {
 
-    public ActiveFactory() {
+    	/**
+	 *
+	 */
+	public ActiveFactory() {
     }
 
-    @Override
+    	/**
+	 *
+	 * @return
+	 */
+	@Override
     public ControlsFacade createControls() {
         return new ActiveControls();
     }
 
-    @Override
+    	/**
+	 *
+	 * @return
+	 */
+	@Override
     public SensorManagerFacade createSensors() {
         return new ActiveSensorManager();
     }
 
-    @Override
+    	/**
+	 *
+	 * @return
+	 */
+	@Override
     public CommManagerFacade createComms() {
         return new Antenna();
     }
 
-    @Override
+    	/**
+	 *
+	 * @return
+	 */
+	@Override
     public StateManagerFacade createState() {
         return new ActiveStateManager();
     }

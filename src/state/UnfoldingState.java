@@ -1,7 +1,3 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package state;
 
 import comms.Message;
@@ -18,12 +14,14 @@ public class UnfoldingState implements State {
 
     @Override
     public void processMessage(Message nextMessage) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        throw new UnsupportedOperationException("Not supported yet.");
     }
 
     @Override
     public void performActiveProcessing(SensorManagerFacade sensors, ControlsFacade controls) {
         displayStateName();
+	controls.unfold();
+	System.out.println("\t\tUnfolding!");
         stateManager.transitionToNextState();
     }
     

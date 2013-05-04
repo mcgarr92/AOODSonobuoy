@@ -1,14 +1,21 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package sensors;
 
 public class WaterDetector {
-    private boolean waterDetected;
 
-    boolean inWater() {
-        return this.waterDetected;
-    }
-    
+	private boolean waterDetected;
+	private int callCount;
+
+	/**
+	 * Returns true if sonobuoy is in water. Currently configured for
+	 * simulation
+	 * 
+	 * @return waterDetected
+	 */
+	boolean inWater() {
+		callCount++;
+		if (callCount > 10) {
+			waterDetected = true;
+		}
+		return waterDetected;
+	}
 }

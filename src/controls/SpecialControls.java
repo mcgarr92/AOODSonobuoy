@@ -2,79 +2,84 @@ package controls;
 
 /**
  *
- * Special control type Sonobuoy implements the contolFacade to allow to
- * perform the permitted functions
+ * Special control type Sonobuoy implements the contolFacade to allow to perform
+ * the permitted functions
  */
 public class SpecialControls implements ControlsFacade {
 
-    private FrameModule frameModule;
-    private LocationModule locationModule;
-    private MovementModule movementModule;
-    private SpecialCommandModule scModule;
-    private SpeedModule speedModule;
+	private FrameModule frameModule;
+	private LocationModule locationModule;
+	private MovementModule movementModule;
+	private SpecialCommandModule scModule;
+	private SpeedModule speedModule;
 
-    /**
-     * COnstructor
-     */
-    public SpecialControls() {
-        frameModule = new FrameModule();
-        speedModule = new SpeedModule();
-        locationModule = new LocationModule();
-        movementModule = new MovementModule(locationModule);
-        scModule = new SpecialCommandModule();
-    }
+	/**
+	 * COnstructor
+	 */
+	public SpecialControls() {
+		frameModule = new FrameModule();
+		speedModule = new SpeedModule();
+		locationModule = new LocationModule();
+		movementModule = new MovementModule(locationModule);
+		scModule = new SpecialCommandModule();
+	}
 
-    @Override
-    public void openFrames() {
-        frameModule.openFrames();
-    }
+	@Override
+	public void openFrames() {
+		frameModule.openFrames();
+	}
 
-    @Override
-    public void closeFrames() {
-        frameModule.closeFrames();
+	@Override
+	public void closeFrames() {
+		frameModule.closeFrames();
 
-    }
+	}
 
-    @Override
-    public boolean isFrameOpen() {
-        return frameModule.isFrameOpen();
-    }
+	@Override
+	public boolean isFrameOpen() {
+		return frameModule.isFrameOpen();
+	}
 
-    @Override
-    public double[] getLocation() {
-        double location[] = {locationModule.getX(), locationModule.getY(),
-            locationModule.getZ()};
-        return location;
-    }
+	@Override
+	public double[] getLocation() {
+		double location[] = {locationModule.getX(), locationModule.getY(),
+			locationModule.getZ()};
+		return location;
+	}
 
-    @Override
-    public void move(int x, int y) {
-        movementModule.move(x, y);
-    }
+	@Override
+	public void move(int x, int y) {
+		movementModule.move(x, y);
+	}
 
-    @Override
-    public void generateSound() {
-        // not implemented
-    }
+	@Override
+	public void generateSound() {
+		// not implemented
+	}
 
-    @Override
-    public void stopSonobouy() {
-        scModule.stopSonobouy();
+	@Override
+	public void stopSonobouy() {
+		scModule.stopSonobouy();
 
-    }
+	}
 
-    @Override
-    public void maydayCommand() {
-        scModule.maydayCommand();
-    }
+	@Override
+	public void maydayCommand() {
+		scModule.maydayCommand();
+	}
 
-    @Override
-    public void setSpeed(int speed) {
-        speedModule.setSpeed(speed);
-    }
+	@Override
+	public void setSpeed(int speed) {
+		speedModule.setSpeed(speed);
+	}
 
-    @Override
-    public int getSpeed() {
-        return speedModule.getSpeed();
-    }
+	@Override
+	public int getSpeed() {
+		return speedModule.getSpeed();
+	}
+
+	@Override
+	public void unfold() {
+		this.frameModule.openFrames();
+	}
 }

@@ -8,11 +8,26 @@ import comms.Message;
 import controls.ControlsFacade;
 import sensors.SensorManagerFacade;
 
+
 public interface State {
 
-    public void processMessage(Message nextMessage);
+    	/**
+	 * Processes next incoming message
+	 * 
+	 * @param nextMessage
+	 */
+	public void processMessage(Message nextMessage);
 
-    public void performActiveProcessing(SensorManagerFacade sensors, ControlsFacade controls);
+    	/**
+	 * Perform processing. Implementation provided by concrete state.
+	 * 
+	 * @param sensors
+	 * @param controls
+	 */
+	public void performActiveProcessing(SensorManagerFacade sensors, ControlsFacade controls);
     
-    public void displayStateName();
+    	/**
+	 * Prints name of current state.
+	 */
+	public void displayStateName();
 }

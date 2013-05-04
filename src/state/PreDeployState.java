@@ -8,28 +8,39 @@ import comms.Message;
 import controls.ControlsFacade;
 import sensors.SensorManagerFacade;
 
+/**
+ *
+ * @author Kevin
+ */
 public class PreDeployState implements State {
 
-    StateManagerControl stateManager;
+	StateManagerControl stateManager;
+	private double lastAltitude;
 
-    PreDeployState(StateManagerControl sm) {
-        this.stateManager = sm;
-    }
+	PreDeployState(StateManagerControl sm) {
+		this.stateManager = sm;
+		this.lastAltitude = 0;
+	}
 
-    @Override
-    public void processMessage(Message nextMessage) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+	@Override
+	public void processMessage(Message nextMessage) {
+		throw new UnsupportedOperationException("Not supported yet.");
+	}
 
-    @Override
-    public void performActiveProcessing(SensorManagerFacade sensors, ControlsFacade controls) {
-        displayStateName();
-        stateManager.transitionToNextState();
-    }
-    
-    @Override
-    public void displayStateName()
-    {
-        System.out.println("1. Pre-Deploy State");
-    }
+	@Override
+	public void performActiveProcessing(SensorManagerFacade sensors, ControlsFacade controls) {
+		displayStateName();
+		if (sensors.inWater()) {
+			System.out.println("\t\tWater detected!");
+			stateManager.transitionToNextState();
+		}
+		else {
+			System.out.println("\t\tNot in water!");
+		}
+	}
+
+	@Override
+	public void displayStateName() {
+		System.out.println("1. Pre-Deploy State");
+	}
 }

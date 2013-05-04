@@ -1,9 +1,5 @@
 package sensors;
 
-/**
- *
- * @author Kevin
- */
 public class SoundSensor {
     private int sound_type;
     

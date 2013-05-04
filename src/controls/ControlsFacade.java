@@ -67,4 +67,9 @@ public interface ControlsFacade {
      * Stops the sonobuoy; Use for emergency case.
      */
     void stopSonobouy();
+    
+    /**
+     * Unfolds the sonobuoy.
+     */
+    void unfold();
 }
