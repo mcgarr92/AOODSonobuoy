@@ -9,32 +9,47 @@ import sensors.SpecialSensorManager;
 import state.SpecialStateManager;
 import state.StateManagerFacade;
 
-/**
- *
- * @author Kevin
- */
 public class SpecialFactory implements SonobuoyFactory {
 
-    public SpecialFactory() {
-    }
+	/**
+	 * Constructor
+	 */
+	public SpecialFactory() {
+	}
 
-    @Override
-    public ControlsFacade createControls() {
-        return new SpecialControls();
-    }
+	/**
+	 *
+	 * @return control facade
+	 */
+	@Override
+	public ControlsFacade createControls() {
+		return new SpecialControls();
+	}
 
-    @Override
-    public SensorManagerFacade createSensors() {
-        return new SpecialSensorManager();
-    }
+	/**
+	 *
+	 * @return sensor facade
+	 */
+	@Override
+	public SensorManagerFacade createSensors() {
+		return new SpecialSensorManager();
+	}
 
-    @Override
-    public CommManagerFacade createComms() {
-        return new Antenna();
-    }
+	/**
+	 *
+	 * @return comm facade
+	 */
+	@Override
+	public CommManagerFacade createComms() {
+		return new Antenna();
+	}
 
-    @Override
-    public StateManagerFacade createState() {
-        return new SpecialStateManager();
-    }
+	/**
+	 *
+	 * @return state facade
+	 */
+	@Override
+	public StateManagerFacade createState() {
+		return new SpecialStateManager();
+	}
 }

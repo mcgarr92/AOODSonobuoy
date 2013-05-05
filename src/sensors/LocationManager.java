@@ -1,7 +1,3 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package sensors;
 
 public class LocationManager {
@@ -16,7 +12,7 @@ public class LocationManager {
 
 	/**
 	 *
-	 * @return
+	 * @return x position
 	 */
 	public int getXPosition() {
 		return this.x;
@@ -24,7 +20,7 @@ public class LocationManager {
 
 	/**
 	 *
-	 * @return
+	 * @return y position
 	 */
 	public int getYPosition() {
 		return this.y;
@@ -32,7 +28,7 @@ public class LocationManager {
 
 	/**
 	 *
-	 * @return
+	 * @return z position
 	 */
 	public int getZPosition() {
 		return this.z;
@@ -40,7 +36,7 @@ public class LocationManager {
 
 	/**
 	 *
-	 * @return
+	 * @return latitude
 	 */
 	public double getLatitude() {
 		return this.lat;
@@ -48,7 +44,7 @@ public class LocationManager {
 
 	/**
 	 *
-	 * @return
+	 * @return longitude
 	 */
 	public double getLongitude() {
 		return this.lon;
@@ -62,6 +58,11 @@ public class LocationManager {
 		return this.altitude;
 	}
 
+
+	/**
+	 *	
+	 * @return
+	 */
 	private void updatePosition() {
 		//determine the XYZ position of the sonobuoy
 	}

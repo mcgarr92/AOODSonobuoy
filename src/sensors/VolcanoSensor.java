@@ -1,9 +1,5 @@
 package sensors;
 
-/**
- *
- * @author Kevin
- */
 public class VolcanoSensor {
     private boolean volcano_detected;
     private boolean valcano_active;

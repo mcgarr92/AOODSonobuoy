@@ -12,14 +12,14 @@ import state.StateManagerFacade;
 public class ActiveFactory implements SonobuoyFactory {
 
     	/**
-	 *
+	 * Constructor
 	 */
 	public ActiveFactory() {
     }
 
     	/**
 	 *
-	 * @return
+	 * @return controls facade
 	 */
 	@Override
     public ControlsFacade createControls() {
@@ -28,7 +28,7 @@ public class ActiveFactory implements SonobuoyFactory {
 
     	/**
 	 *
-	 * @return
+	 * @return sensor facade
 	 */
 	@Override
     public SensorManagerFacade createSensors() {
@@ -37,7 +37,7 @@ public class ActiveFactory implements SonobuoyFactory {
 
     	/**
 	 *
-	 * @return
+	 * @return comm facade
 	 */
 	@Override
     public CommManagerFacade createComms() {
@@ -46,7 +46,7 @@ public class ActiveFactory implements SonobuoyFactory {
 
     	/**
 	 *
-	 * @return
+	 * @return state facade
 	 */
 	@Override
     public StateManagerFacade createState() {

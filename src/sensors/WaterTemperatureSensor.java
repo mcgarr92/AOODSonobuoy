@@ -1,9 +1,5 @@
 package sensors;
 
-/**
- *
- * @author Kevin
- */
 public class WaterTemperatureSensor {
     private float water_temp_in_celcius;
     private float water_temp_in_fahrenheit;

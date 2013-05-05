@@ -9,32 +9,47 @@ import sensors.SensorManagerFacade;
 import state.PassiveStateManager;
 import state.StateManagerFacade;
 
-/**
- *
- * @author Kevin
- */
 public class PassiveFactory implements SonobuoyFactory {
 
-    public PassiveFactory() {
-    }
+	/**
+	 * Constructor
+	 */
+	public PassiveFactory() {
+	}
 
-    @Override
-    public ControlsFacade createControls() {
-        return new PassiveControls();
-    }
+	/**
+	 *
+	 * @return controls facade
+	 */
+	@Override
+	public ControlsFacade createControls() {
+		return new PassiveControls();
+	}
 
-    @Override
-    public SensorManagerFacade createSensors() {
-        return new PassiveSensorManager();
-    }
+	/**
+	 *
+	 * @return sensor facade
+	 */
+	@Override
+	public SensorManagerFacade createSensors() {
+		return new PassiveSensorManager();
+	}
 
-    @Override
-    public CommManagerFacade createComms() {
-        return new Antenna();
-    }
+	/**
+	 *
+	 * @return comm facade
+	 */
+	@Override
+	public CommManagerFacade createComms() {
+		return new Antenna();
+	}
 
-    @Override
-    public StateManagerFacade createState() {
-        return new PassiveStateManager();
-    }
+	/**
+	 *
+	 * @return state facade
+	 */
+	@Override
+	public StateManagerFacade createState() {
+		return new PassiveStateManager();
+	}
 }
