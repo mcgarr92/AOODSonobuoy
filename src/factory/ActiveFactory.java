@@ -9,46 +9,52 @@ import sensors.SensorManagerFacade;
 import state.ActiveStateManager;
 import state.StateManagerFacade;
 
+/**
+ * This class represents an Active Factory which creates components related 
+ * to any Active Sonobuoy
+ * @author Jon Palka
+ * Project 2 - Spring 2013 - AOOD - Rowan University
+ */
 public class ActiveFactory implements SonobuoyFactory {
 
-    	/**
-	 * Constructor
-	 */
-	public ActiveFactory() {
+    /**
+     * Constructor
+     */
+    public ActiveFactory() {
     }
 
-    	/**
-	 *
-	 * @return controls facade
-	 */
-	@Override
+    /**
+     * Creates an Active controller and returns access to it
+     * @return controls facade
+     */
+    @Override
     public ControlsFacade createControls() {
         return new ActiveControls();
     }
 
-    	/**
-	 *
-	 * @return sensor facade
-	 */
-	@Override
+    /**
+     * Creates a new Sensor manager and returns access to it
+     * @return sensor facade
+     */
+    @Override
     public SensorManagerFacade createSensors() {
         return new ActiveSensorManager();
     }
 
-    	/**
-	 *
-	 * @return comm facade
-	 */
-	@Override
+    /**
+     * Creates a new Antenna for communication and returns access to it
+     * @return comm facade
+     */
+    @Override
     public CommManagerFacade createComms() {
         return new Antenna();
     }
 
-    	/**
-	 *
-	 * @return state facade
-	 */
-	@Override
+    /**
+     * Creates the ActiveState Manager and returns access to it
+     * @return state facade
+     */
+    @Override
     public StateManagerFacade createState() {
         return new ActiveStateManager();
     }
