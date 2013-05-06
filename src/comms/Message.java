@@ -3,6 +3,8 @@ package comms;
 /**
  * The Message provides an object in which data can be stored
  * and sent to other sonobuoy.
+ * @author Jon Palka
+ * Project 2 - Spring 2013 - AOOD - Rowan University
  */
 public class Message
 {

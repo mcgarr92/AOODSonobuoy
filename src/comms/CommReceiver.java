@@ -4,6 +4,8 @@ import java.util.ArrayList;
 
 /**
  * The CommREceiver class receives messages from the CommSender class.
+ * @author Jon Palka
+ * Project 2 - Spring 2013 - AOOD - Rowan University
  */
 public class CommReceiver
 {
@@ -13,7 +15,6 @@ public class CommReceiver
     /**
      * Constructor
      *
-     * @param parent: Sonobuoy object that contains this CommReceiver
      * @param name:   Name of CommReceiver
      */
     public CommReceiver(String name)
@@ -32,6 +33,9 @@ public class CommReceiver
         messages.add(m);
     }
 
+    /*
+     * Determines if a message is waiting to be processed in the queue
+     */
     public boolean messagePending()
     {
         return messages.size() > 0;

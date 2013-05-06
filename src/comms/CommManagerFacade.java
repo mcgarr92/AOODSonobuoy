@@ -1,9 +1,9 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package comms;
-
+/*
+ * Provides an interface to the CommSender and CommReceiver classes.
+ * @author Jon Palka
+ * Project 2 - Spring 2013 - AOOD - Rowan University
+ */
 public interface CommManagerFacade {
 
     /**
@@ -31,8 +31,15 @@ public interface CommManagerFacade {
      */
     public void sendMessage(Message m);
 
+    /*
+     * Determines if a message is waiting to be processed in the queue
+     */
     public boolean messagePending();
     
+    /*
+     * Gets the current message in the queue
+     * @return Message
+     */
     public Message getNextMessage();
     
 }

@@ -5,7 +5,10 @@ import java.util.ArrayList;
 /**
  * The CommSender class keeps track of who is registered for a message and will
  * also send messages out.
+ * @author Jon Palka
+ * Project 2 - Spring 2013 - AOOD - Rowan University
  */
+
 public class CommSender
 {
     private ArrayList<CommReceiver> messageReceivers;

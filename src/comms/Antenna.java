@@ -1,7 +1,10 @@
 package comms;
 
 /**
- * Provides an interface to the CommSender and CommReceiver classes.
+ * This class represents an Antenna which is used for communication
+ * (sending and receiving messages)
+ * @author Jon Palka
+ * Project 2 - Spring 2013 - AOOD - Rowan University
  */
 public class Antenna implements CommManagerFacade {
 
@@ -11,7 +14,6 @@ public class Antenna implements CommManagerFacade {
     /**
      * Constructor
      *
-     * @param sonobouy: Sonobuoy containing this Antenna
      */
     public Antenna() {
         commSender = new CommSender("CommSender");
