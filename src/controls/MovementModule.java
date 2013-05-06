@@ -1,8 +1,9 @@
 package controls;
 
 /**
- *
  * Class responsible for translating and rotating sonobuoy as needed.
+ * @author Milkias Tadesse
+ * Project 2 - Spring 2013 - AOOD - Rowan University
  */
 public class MovementModule {
 

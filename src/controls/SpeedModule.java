@@ -1,8 +1,9 @@
 package controls;
 
 /**
- *
  * Class handles speed commands
+ * @author Milkias Tadesse
+ * Project 2 - Spring 2013 - AOOD - Rowan University
  */
 public class SpeedModule {
     private int speed;
@@ -15,7 +16,7 @@ public class SpeedModule {
     }
 
     /**
-     *
+     * Sets the speed of the sonobuoy
      * @param speed:int speed value
      */
     public void setSpeed(int speed) {

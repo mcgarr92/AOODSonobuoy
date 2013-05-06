@@ -1,8 +1,9 @@
 package controls;
 
 /**
- *
  * Class responsible for commanding sonobuoy to open or close frames
+ * @author Milkias Tadesse
+ * Project 2 - Spring 2013 - AOOD - Rowan University
  */
 public class FrameModule {
 

@@ -1,9 +1,9 @@
-
 package controls;
 
 /**
- *
  * Interface used for performing control commands for sonobuoy
+ * @author Milkias Tadesse
+ * Project 2 - Spring 2013 - AOOD - Rowan University
  */
 public interface ControlsFacade {
 
