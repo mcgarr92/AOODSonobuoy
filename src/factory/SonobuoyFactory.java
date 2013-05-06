@@ -1,3 +1,7 @@
+/**
+ * Kevin McGarry
+ */
+
 package factory;
 
 import comms.CommManagerFacade;
