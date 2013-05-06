@@ -66,7 +66,7 @@ public class PassiveSensorManager implements SensorManagerFacade {
 	}
 
 	@Override
-	public void listenForEnviornmentSounds() {
+	public void listenForEnvironmentSounds() {
 		// TODO: implement
 	}
 

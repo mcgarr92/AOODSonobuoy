@@ -33,6 +33,7 @@ public interface CommManagerFacade {
 
     /*
      * Determines if a message is waiting to be processed in the queue
+     * @return boolean: message pending indicator
      */
     public boolean messagePending();
     

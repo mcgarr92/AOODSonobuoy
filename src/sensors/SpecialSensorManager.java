@@ -71,7 +71,7 @@ public class SpecialSensorManager implements SensorManagerFacade {
 	}
 
 	@Override
-	public void listenForEnviornmentSounds() {
+	public void listenForEnvironmentSounds() {
 		// TODO: implement
 	}
 }

@@ -1,77 +1,75 @@
-/**
- * Kevin McGarry
- */
-
 package sensors;
 
 /**
  * Provides abstract access to sensor modules
+ * @author Kevin McGarry
+ * Project 2 - Spring 2013 - AOOD - Rowan University
  */
 public interface SensorManagerFacade {
 
-	/**
-	 *
-	 * @return depth
-	 */
+	/*
+         * Get the current depth
+         * @return double: depth
+         */
 	public double getDepth();
 
-	/**
-	 *
-	 * @return X position
-	 */
+	/*
+         * Get the X position
+         * @return int: x position
+         */
 	public int getXPosition();
 
-	/**
-	 *
-	 * @return Y position
-	 */
+	/*
+         * Get the Y position
+         * @return int: Y position
+         */
 	public int getYPosition();
 
-	/**
-	 *
-	 * @return Z position
-	 */
+	/*
+         * Get the Z position
+         * @return int: Z position
+         */
 	public int getZPosition();
 
-	/**
-	 *
-	 * @return Latitude
-	 */
+	/*
+         * Get the latitude
+         * @return double: latitude
+         */
 	public double getLatitude();
 
-	/**
-	 *
-	 * @return Longitude
-	 */
+	/*
+         * Get the longitude
+         * @return double: longitude
+         */
 	public double getLongitude();
 
-	/**
-	 *
-	 * @return Altitude
-	 */
+	/*
+         * Get the altitude
+         * @return double: altitude
+         */
 	public double getAltitude();
 
-	/**
-	 * Returns true if sonobuoy is in water. Currently configured for
-	 * simulation
-	 *
-	 * @return waterDetected
-	 */
+        /*
+         * Determine if the Sonobuoy is in the water 
+         * (Currently configured for simulation)
+         * @return boolean: inWater
+         */
 	public boolean inWater();
 
-	/**
-	 *
-	 * @return Water Temperature
-	 */
+	/*
+         * Get the water temperature
+         * @return float: water temperature
+         */
 	public float getWaterTemperature();
 
-	/**
-	 * Listens for echo from generated sound.
-	 */
+	/*
+         * Listen for an echo and return true or false
+         * @return boolean: echo returned
+         */
 	public boolean listenForEcho();
 
 	/**
-	 * Listens for environment sounds.
+	 * Listen for environment sounds.
 	 */
-	public void listenForEnviornmentSounds();
+	public void listenForEnvironmentSounds();
 }
