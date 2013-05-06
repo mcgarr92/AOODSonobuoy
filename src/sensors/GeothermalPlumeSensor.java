@@ -1,3 +1,7 @@
+/**
+ * Kevin McGarry
+ */
+
 package sensors;
 
 public class GeothermalPlumeSensor {
