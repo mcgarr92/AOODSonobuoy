@@ -4,6 +4,7 @@
  */
 package state;
 
+import comms.CommManagerFacade;
 import comms.Message;
 import controls.ControlsFacade;
 import sensors.SensorManagerFacade;
@@ -16,7 +17,7 @@ class PassiveDeployedState implements State {
     }
 
     @Override
-    public void performActiveProcessing(SensorManagerFacade sensors, ControlsFacade controls) {
+    public void performActiveProcessing(SensorManagerFacade sensors, ControlsFacade controls, CommManagerFacade comms) {
         displayStateName();
         //stateManager.trasitionToNextState();
         throw new UnsupportedOperationException("Passive Deployed State not supported yet.");

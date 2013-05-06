@@ -68,7 +68,7 @@ public interface SensorManagerFacade {
 	/**
 	 * Listens for echo from generated sound.
 	 */
-	public void listenForEcho();
+	public boolean listenForEcho();
 
 	/**
 	 * Listens for environment sounds.

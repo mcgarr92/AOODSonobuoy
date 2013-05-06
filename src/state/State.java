@@ -4,6 +4,7 @@
  */
 package state;
 
+import comms.CommManagerFacade;
 import comms.Message;
 import controls.ControlsFacade;
 import sensors.SensorManagerFacade;
@@ -23,8 +24,9 @@ public interface State {
 	 * 
 	 * @param sensors
 	 * @param controls
+         * @param comms
 	 */
-	public void performActiveProcessing(SensorManagerFacade sensors, ControlsFacade controls);
+	public void performActiveProcessing(SensorManagerFacade sensors, ControlsFacade controls, CommManagerFacade comms);
     
     	/**
 	 * Prints name of current state.

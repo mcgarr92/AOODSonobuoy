@@ -71,7 +71,7 @@ public class PassiveSensorManager implements SensorManagerFacade {
 	}
 
 	@Override
-	public void listenForEcho() {
+	public boolean listenForEcho() {
 		throw new UnsupportedOperationException("Not supported in passive.");
 	}
 }

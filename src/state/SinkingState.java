@@ -1,5 +1,6 @@
 package state;
 
+import comms.CommManagerFacade;
 import comms.Message;
 import controls.ControlsFacade;
 import sensors.SensorManagerFacade;
@@ -18,7 +19,7 @@ public class SinkingState implements State {
 	}
 
 	@Override
-	public void performActiveProcessing(SensorManagerFacade sensors, ControlsFacade controls) {
+	public void performActiveProcessing(SensorManagerFacade sensors, ControlsFacade controls, CommManagerFacade comms) {
 		displayStateName();
 		System.out.println("\t\tDepth = " + sensors.getDepth());
 		if (sensors.getDepth() >= 20) { // TODO: make max depth configurable

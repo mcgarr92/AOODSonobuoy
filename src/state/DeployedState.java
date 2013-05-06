@@ -4,6 +4,7 @@
  */
 package state;
 
+import comms.CommManagerFacade;
 import comms.Message;
 import controls.ControlsFacade;
 import sensors.SensorManagerFacade;
@@ -22,7 +23,7 @@ public class DeployedState implements State {
     }
 
     @Override
-    public void performActiveProcessing(SensorManagerFacade sensors, ControlsFacade controls) {
+    public void performActiveProcessing(SensorManagerFacade sensors, ControlsFacade controls, CommManagerFacade comms) {
         displayStateName();
         stateManager.transitionToNextState();
     }

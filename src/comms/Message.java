@@ -8,12 +8,12 @@ package comms;
  */
 public class Message
 {
-    private int depth;
+    private double depth;
     private int xCoord;
     private int yCoord;
     private int zCoord;
     private int bearingOfReturnSound;
-    private int waterTemp;
+    private float waterTemp;
 
     /**
      * Constructor
@@ -24,7 +24,7 @@ public class Message
      * @param bearingOfReturnSound: Bearing of return sound.
      * @param waterTemp: Water temperature.
      */
-    public Message(int depth, int xCoord, int yCoord, int zCoord, int  bearingOfReturnSound, int waterTemp)
+    public Message(double depth, int xCoord, int yCoord, int zCoord, int bearingOfReturnSound, float waterTemp)
     {
         this.depth = depth;
         this.xCoord = xCoord;
@@ -52,7 +52,7 @@ public class Message
      * Returns depth;
      * @return depth
      */
-    public int getDepth()
+    public double getDepth()
     {
         return depth;
     }
@@ -97,7 +97,7 @@ public class Message
      * Returns water temperature
      * @return waterTemp
      */
-    public int getWaterTemp()
+    public float getWaterTemp()
     {
         return waterTemp;
     }

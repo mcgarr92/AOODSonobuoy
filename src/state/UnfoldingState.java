@@ -1,5 +1,6 @@
 package state;
 
+import comms.CommManagerFacade;
 import comms.Message;
 import controls.ControlsFacade;
 import sensors.SensorManagerFacade;
@@ -18,7 +19,7 @@ public class UnfoldingState implements State {
     }
 
     @Override
-    public void performActiveProcessing(SensorManagerFacade sensors, ControlsFacade controls) {
+    public void performActiveProcessing(SensorManagerFacade sensors, ControlsFacade controls, CommManagerFacade comms) {
         displayStateName();
 	controls.unfold();
 	System.out.println("\t\tUnfolding!");

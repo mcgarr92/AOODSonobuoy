@@ -4,6 +4,8 @@
 
 package sensors;
 
+import java.util.Random;
+
 public class ActiveSensorManager implements SensorManagerFacade {
 
 	private final DepthSensor depthSensor;
@@ -66,8 +68,9 @@ public class ActiveSensorManager implements SensorManagerFacade {
 	}
 
 	@Override
-	public void listenForEcho() {
-		// TODO: implement
+	public boolean listenForEcho() {
+		Random generator = new Random();
+                return generator.nextBoolean();
 	}
 
 	@Override

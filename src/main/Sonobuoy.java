@@ -36,7 +36,7 @@ public class Sonobuoy {
             if (comms.messagePending()) {
                 state.getCurrentState().processMessage(comms.getNextMessage());
             } else {
-                state.getCurrentState().performActiveProcessing(sensors, controls);
+                state.getCurrentState().performActiveProcessing(sensors, controls, comms);
             }
         }
     }

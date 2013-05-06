@@ -66,8 +66,8 @@ public class SpecialSensorManager implements SensorManagerFacade {
 	}
 
 	@Override
-	public void listenForEcho() {
-		// TODO: implement
+	public boolean listenForEcho() {
+		return false;
 	}
 
 	@Override
