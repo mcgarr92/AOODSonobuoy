@@ -1,7 +1,3 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package state;
 
 import comms.CommManagerFacade;
@@ -9,27 +5,31 @@ import comms.Message;
 import controls.ControlsFacade;
 import sensors.SensorManagerFacade;
 
-
+/**
+ * This class represents the State interface (common to all states) 
+ * @author Ben Hample
+ * Project 2 - Spring 2013 - AOOD - Rowan University
+ */
 public interface State {
 
-    	/**
-	 * Processes next incoming message
-	 * 
-	 * @param nextMessage
-	 */
+    	/*
+         * Processes the inbound message
+         * @param Message nextMessage
+         */
 	public void processMessage(Message nextMessage);
 
-    	/**
-	 * Perform processing. Implementation provided by concrete state.
-	 * 
-	 * @param sensors
-	 * @param controls
-         * @param comms
-	 */
+    	/*
+         * Perform active processing (common to every state)
+         * Depending on the processing required, the facades are provided
+         * to enable to usage of various sensors, controls and communications
+         * @param SensorManagerFacade sensors 
+         * @param ControlsFacade controls 
+         * @param CommManagerFacade comms
+         */
 	public void performActiveProcessing(SensorManagerFacade sensors, ControlsFacade controls, CommManagerFacade comms);
     
-    	/**
-	 * Prints name of current state.
-	 */
+    	/*
+         * Display the current state name
+         */
 	public void displayStateName();
 }

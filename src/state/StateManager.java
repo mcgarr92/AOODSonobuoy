@@ -3,7 +3,9 @@ package state;
 import java.util.ArrayList;
 
 /**
- * Manages the states of the sonobuoy.
+ * This class manages the states of the sonobuoy. 
+ * @author Ben Hample
+ * Project 2 - Spring 2013 - AOOD - Rowan University
  */
 public class StateManager implements StateManagerFacade, StateManagerControl {
 
