@@ -1,9 +1,11 @@
-/**
- * Kevin McGarry
- */
-
 package sensors;
 
+/**
+ * This class provides functionality related to the 
+ * location of the Sonobuoy
+ * @author Kevin McGarry
+ * Project 2 - Spring 2013 - AOOD - Rowan University
+ */
 public class LocationManager {
 
 	private int x = 0;
@@ -15,48 +17,48 @@ public class LocationManager {
 	private int altitudeCallCount;
 
 	/**
-	 *
-	 * @return x position
+	 * Get the X Position
+	 * @return int: x position
 	 */
 	public int getXPosition() {
 		return this.x;
 	}
 
 	/**
-	 *
-	 * @return y position
+	 * Get the Y Position
+	 * @return int: y position
 	 */
 	public int getYPosition() {
 		return this.y;
 	}
 
 	/**
-	 *
-	 * @return z position
+	 * Get the Z position
+	 * @return int: z position
 	 */
 	public int getZPosition() {
 		return this.z;
 	}
 
 	/**
-	 *
-	 * @return latitude
+	 * Get the Latitude
+	 * @return double: latitude
 	 */
 	public double getLatitude() {
 		return this.lat;
 	}
 
 	/**
-	 *
-	 * @return longitude
+	 * Get the Longitude
+	 * @return double: longitude
 	 */
 	public double getLongitude() {
 		return this.lon;
 	}
 
 	/**
-	 *	
-	 * @return altitude
+	 * Get the altitude
+	 * @return double: altitude
 	 */
 	public double getAltitude() {
 		return this.altitude;
@@ -64,8 +66,7 @@ public class LocationManager {
 
 
 	/**
-	 *	
-	 * @return
+	 * Update the position of the Sonobuoy
 	 */
 	private void updatePosition() {
 		//determine the XYZ position of the sonobuoy
